@@ -1046,7 +1046,7 @@ int32_t vtkPlusWinProbeVideoSource::GetBMultiFocalZoneCount()
 //----------------------------------------------------------------------------
 PlusStatus vtkPlusWinProbeVideoSource::SetBMultiFocalZoneCount(int32_t count)
 {
-  assert(count >= 1 && count < 4);
+  assert(count >= 1 && count <= 4);
   m_BMultiTxCount = count;
   if(Connected)
   {
