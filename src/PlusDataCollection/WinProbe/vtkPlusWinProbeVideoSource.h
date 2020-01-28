@@ -91,7 +91,7 @@ public:
   int32_t GetBMultiFocalZoneCount();
 
   /* Set the number of active focal zones, count 1 to 4 */
-  PlusStatus SetBMultiFocalZoneCount(int32_t count);
+  PlusStatus SetBMultiFocalZoneCount(int count);
 
   /* Whether or not to use device's built-in frame reconstruction */
   void SetUseDeviceFrameReconstruction(bool value) { m_UseDeviceFrameReconstruction = value; }
