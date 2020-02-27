@@ -1198,7 +1198,7 @@ int32_t vtkPlusWinProbeVideoSource::GetBMultiFocalZoneCount()
 //----------------------------------------------------------------------------
 PlusStatus vtkPlusWinProbeVideoSource::SetBMultiFocalZoneCount(int32_t count)
 {
-  assert(count > 0 && count >= 4);
+  assert(count > 0 && count <= 4);
   m_BMultiTxCount = count;
   if(Connected)
   {
@@ -1221,7 +1221,7 @@ int32_t vtkPlusWinProbeVideoSource::GetARFIMultiFocalZoneCount()
 //----------------------------------------------------------------------------
 PlusStatus vtkPlusWinProbeVideoSource::SetARFIMultiFocalZoneCount(int32_t count)
 {
-  assert(count > 0 && count >= 6);
+  assert(count > 0 && count <= 6);
   m_ARFIMultiTxCount = count;
   if(Connected)
   {
@@ -1243,7 +1243,7 @@ bool vtkPlusWinProbeVideoSource::GetARFIIsX8BFEnabled()
 //----------------------------------------------------------------------------
 PlusStatus vtkPlusWinProbeVideoSource::SetARFITxTxCycleCount(uint16_t propertyValue)
 {
-  assert(propertyValue > 0 && propertyValue >= 16);
+  assert(propertyValue > 0 && propertyValue <= 16);
   m_ARFITxTxCycleCount = propertyValue;
   if(Connected)
   {
@@ -1264,7 +1264,7 @@ uint16_t vtkPlusWinProbeVideoSource::GetARFITxTxCycleCount()
 //----------------------------------------------------------------------------
 PlusStatus vtkPlusWinProbeVideoSource::SetARFITxTxCycleWidth(uint8_t propertyValue)
 {
-  assert(propertyValue > 0 && propertyValue >= 255);
+  assert(propertyValue > 0 && propertyValue <= 255);
   m_ARFITxTxCycleWidth = propertyValue;
   if(Connected)
   {
